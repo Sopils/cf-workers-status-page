@@ -1,0 +1,97 @@
+settings:
+  title: 'Leonardo Benicio Status Page'
+  url: 'https://status.lbenicio.dev' # used for Slack messages
+  logo: logo-192x192.png # image in ./public/ folder
+  daysInHistogram: 90 # number of days you want to display in histogram
+  collectResponseTimes: true # collects avg response times from CRON locations
+
+  allmonitorsOperational: 'All Systems Operational'
+  notAllmonitorsOperational: 'Not All Systems Operational'
+  monitorLabelOperational: 'Operational'
+  monitorLabelNotOperational: 'Not Operational'
+  monitorLabelNoData: 'No data'
+  dayInHistogramNoData: 'No data'
+  dayInHistogramOperational: 'All good'
+  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+
+monitors:
+  - id: lbenicio-main # unique identifier
+    name: lbenicio.dev
+    description: 'Personal website.' # default=empty
+    url: 'https://lbenicio.dev/' # URL to fetch
+    method: GET # default=GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: true # allows the title to be a link, default=true
+
+  - id: lbenicio-blog
+    name: blog.lbenicio.dev
+    description: 'Personal blog.'
+    url: 'https://blog.lbenicio.dev'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: lbenicio-link
+    name: link.lbenicio.dev
+    description: 'URL shortner service.'
+    url: 'https://link.lbenicio.dev'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: lbenicio-pgp
+    name: pgp.lbenicio.dev
+    description: 'Pgp key server.'
+    url: 'https://pgp.lbenicio.dev'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: lbenicio-socials
+    name: socials.lbenicio.dev
+    description: 'socials links repository.'
+    url: 'https://socials.lbenicio.dev'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: lbenicio-newsletter
+    name: newsletter.lbenicio.dev
+    description: 'newsletter service.'
+    url: 'https://newsletter.lbenicio.dev'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: lbenicio-contact
+    name: contact.lbenicio.dev
+    description: 'contact form.'
+    url: 'https://contact.lbenicio.dev'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: lbenicio-paste
+    name: paste.lbenicio.dev
+    description: 'URL shortner service.'
+    url: 'https://paste.lbenicio.dev'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: lbenicio-public
+    name: public.lbenicio.dev
+    description: 'public repository.'
+    url: 'https://public.lbenicio.dev'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
